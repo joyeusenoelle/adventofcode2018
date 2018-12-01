@@ -18,10 +18,8 @@ def main(args):
             elif item[0] == "-":
                 freq -= int(item[1:])
             if freq in freqlist:
-                return freq
+                return "Found after {} cycles: {}".format(cycles,freq)
             freqlist.append(freq)
-        if cycles == 1000000:
-            return "I haven't found a duplicate after a million cycles."
 
 if __name__ == "__main__":
     args = input("Paste the modulations here: ")
